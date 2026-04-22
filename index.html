@@ -3,12 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <title>Stryde - Built to Run. Made to Last.</title>
     <link rel="icon" href="essentials/favicon.png">
-    <title>STRYDE</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-    <h1>Hello World!</h1>
 <body>
+    <header>
+        <nav>
+            <div class="logo"> STRYDE 
+                <img src="essentials/icon_transparent.png" alt="Stryde Logo" class="logo-img">
+            </div>
+            <button class="cart-btn" onclick="alert('Coming soon!')">
+                <span class="cart-icon">🛒</span>
+                Cart
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slideshow-section">
+            <button class="slide-btn prev">&#8249;</button>
+
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h1>Built to Run.<br>Made to Last.</h1>
+                    <p>Premium shoes for every stride.</p>
+                    <button class="btn-order">Buy Now</button>
+                </div>
+                <img src="featured/sneakers.png" alt="Maroon Sneakers">
+            </div>
+
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h1>Built to Run.<br>Made to Last.</h1>
+                    <p>Premium shoes for every stride.</p>
+                    <button class="btn-order">Buy Now</button>
+                </div>
+                <img src="featured/running.png" alt="Blue Running Shoes">
+            </div>
+
+            <div class="slide-content">
+                <div class="slide-text">
+                    <h1>Built to Run.<br>Made to Last.</h1>
+                    <p>Premium shoes for every stride.</p>
+                    <button class="btn-order">Buy Now</button>
+                </div>
+                <img src="featured/casual.png" alt="Colorful Design Shoes">
+            </div>
+
+            <button class="slide-btn next">&#8250;</button>
+        </section>
+
+        <section class="products-section">
+            <h2>OUR PRODUCTS</h2>
+            <div class="products-grid" id="products.grid">
+
+            <!--product1-->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="products/casual.png" alt="Colorful Design Shoes" class="shoe-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-name">Colorful Design Shoes</span>
+                        <span class="card-price">₱1,850</span>
+                        <button class="btn-order">View Product</button>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!--product2-->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="products/sneakers.png" alt="Maroon Sneakers" class="shoe-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-name">Maroon Sneakers</span>
+                        <span class="card-price">₱2,550</span>
+                        <button class="btn-order">View Product</button>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!--product3-->
+                <div class="card">
+                    <div class="card-img-wrap">
+                        <img src="products/running.png" alt="Blue Running Shoes" class="shoe-img">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-name">Blue Running Shoes</span>
+                        <span class="card-price">₱5,350</span>
+                        <button class="btn-order">View Product</button>
+                        <button class="btn-order">Add to Cart</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 STRYDE. All rights reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
