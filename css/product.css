@@ -1,0 +1,237 @@
+/* Product Details */
+
+.product-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: opacity 0.25s;
+}
+
+.product-overlay.hidden {
+    display: none;
+}
+
+.product-overlay-box {
+    background: #ffffff;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 820px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Close button */
+.overlay-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: #f0f4ff;
+    border: none;
+    font-size: 1.1rem;
+    color: #555;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+    z-index: 10;
+}
+
+.overlay-close:hover {
+    background: #e63030;
+    color: #ffffff;
+}
+
+/* Layout: image left, details right */
+.overlay-body {
+    display: flex;
+    gap: 0;
+}
+
+.overlay-img-wrap {
+    width: 45%;
+    flex-shrink: 0;
+    background: #f7f8fc;
+    border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    min-height: 380px;
+}
+
+.overlay-img-wrap img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+.overlay-details {
+    flex: 1;
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Category badge */
+.overlay-category {
+    display: inline-block;
+    background: #e8f0ff;
+    color: #005bea;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.overlay-name {
+    font-family: Impact, 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #0d1b3e;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.overlay-brand {
+    font-size: 0.85rem;
+    color: #6b6b6b;
+    font-weight: 500;
+}
+
+.overlay-brand span {
+    color: #005bea;
+    font-weight: 700;
+}
+
+.overlay-price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0d1b3e;
+}
+
+.overlay-divider {
+    border: none;
+    border-top: 1px solid #e0e4f0;
+    margin: 4px 0;
+}
+
+.overlay-description {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Colors */
+.overlay-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 6px;
+}
+
+.overlay-colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.color-tag {
+    background: #f0f4ff;
+    color: #005bea;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+/* Sizes */
+.overlay-sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.size-tag {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #e0e4f0;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.size-tag:hover, .size-tag.selected {
+    border-color: #005bea;
+    background: #005bea;
+    color: #ffffff;
+}
+
+/* Add to cart button inside overlay */
+.overlay-add-btn {
+    margin-top: 8px;
+    width: 100%;
+    padding: 14px 0;
+    background: #005bea;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-family: Impact, 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.overlay-add-btn:hover {
+    background: #0d1b3e;
+    transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+    .overlay-body {
+        flex-direction: column;
+    }
+
+    .overlay-img-wrap {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        min-height: 220px;
+        padding: 24px;
+    }
+
+    .overlay-details {
+        padding: 24px 20px;
+    }
+
+    .overlay-name { font-size: 1.5rem; }
+    .overlay-price { font-size: 1.3rem; }
+}
