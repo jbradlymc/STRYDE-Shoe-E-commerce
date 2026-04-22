@@ -1,0 +1,180 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Colorful Design Shoes",
+            "brand": "Vans",
+            "category": "Casual",
+            "description": "A bold and vibrant casual shoe designed for those who love to stand out. Lightweight construction with a cushioned insole for all-day comfort.",
+            "price": 1850,
+            "colors": ["Multicolor", "White"],
+            "sizes": [6, 7, 8, 9, 10, 11],
+            "image": "images/products/casual.png"
+        },
+        {
+            "id": 2,
+            "name": "Maroon Sneakers",
+            "brand": "Nike",
+            "category": "Sneakers",
+            "description": "Classic low-top sneakers with a rich maroon colorway. Durable canvas upper with a clean white rubber sole — a timeless streetwear staple.",
+            "price": 2550,
+            "colors": ["Maroon", "White"],
+            "sizes": [6, 7, 8, 9, 10, 11, 12],
+            "image": "images/products/sneakers.png"
+        },
+        {
+            "id": 3,
+            "name": "Blue Running Shoes",
+            "brand": "Adidas",
+            "category": "Running",
+            "description": "High-performance running shoes engineered for speed and endurance. Responsive cushioning and breathable mesh upper keep you moving at your best.",
+            "price": 5350,
+            "colors": ["Blue", "Teal", "Black"],
+            "sizes": [7, 8, 9, 10, 11],
+            "image": "images/products/running.png"
+        },
+        {
+            "id": 4,
+            "name": "Leather Boots",
+            "brand": "Timberland",
+            "category": "Casual",
+            "description": "Premium full-grain leather boots built to last. Water-resistant construction with a rugged outsole — perfect for the outdoors or the city streets.",
+            "price": 1550,
+            "colors": ["Brown", "Black"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe01.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Basketball Shoes",
+            "brand": "Jordan",
+            "category": "Rubber Shoes",
+            "description": "Dominate the court with ankle support, responsive cushioning, and a grippy rubber outsole. Built for explosive movements and quick cuts.",
+            "price": 2760,
+            "colors": ["Black", "Red", "White"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe02.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Nice Shoes",
+            "brand": "Puma",
+            "category": "Sneakers",
+            "description": "Clean and versatile everyday sneakers with a minimalist silhouette. Soft foam midsole delivers cushioning comfort from morning to night.",
+            "price": 3000,
+            "colors": ["White", "Gray"],
+            "sizes": [6, 7, 8, 9, 10],
+            "image": "images/products/shoe03.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Grayish Fast Shoes",
+            "brand": "New Balance",
+            "category": "Running",
+            "description": "Engineered for speed with a lightweight upper and energy-return foam sole. The streamlined gray colorway pairs with any workout outfit.",
+            "price": 3400,
+            "colors": ["Gray", "White", "Navy"],
+            "sizes": [7, 8, 9, 10, 11],
+            "image": "images/products/shoe04.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Very Neat Shoes",
+            "brand": "Reebok",
+            "category": "Casual",
+            "description": "Effortlessly neat and put-together. A refined casual shoe that transitions smoothly from daytime errands to weekend hangouts.",
+            "price": 2800,
+            "colors": ["Beige", "White"],
+            "sizes": [6, 7, 8, 9, 10, 11],
+            "image": "images/products/shoe05.jpg"
+        },
+        {
+            "id": 9,
+            "name": "Powerful Blue Shoes",
+            "brand": "Asics",
+            "category": "Running",
+            "description": "Maximum support meets bold style. The Powerful Blue features a dual-density midsole and reinforced heel counter for serious runners.",
+            "price": 3550,
+            "colors": ["Blue", "White"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe06.jpg"
+        },
+        {
+            "id": 10,
+            "name": "Casual White Sneakers",
+            "brand": "Converse",
+            "category": "Sneakers",
+            "description": "An iconic silhouette that never goes out of style. The classic white canvas upper pairs with anything — jeans, shorts, or a dress.",
+            "price": 1650,
+            "colors": ["White", "Black"],
+            "sizes": [5, 6, 7, 8, 9, 10, 11],
+            "image": "images/products/shoe07.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Old School Shoes",
+            "brand": "Vans",
+            "category": "Sneakers",
+            "description": "The original skate shoe. Low-profile design with sturdy canvas upper and the signature waffle outsole for superior board feel and grip.",
+            "price": 2400,
+            "colors": ["Black", "White", "Red"],
+            "sizes": [6, 7, 8, 9, 10, 11],
+            "image": "images/products/shoe11.jpg"
+        },
+        {
+            "id": 12,
+            "name": "High Cut Casual Shoes",
+            "brand": "Nike",
+            "category": "Sneakers",
+            "description": "High-top silhouette with ankle collar support. A bold street-style statement that blends basketball heritage with everyday casual wear.",
+            "price": 3700,
+            "colors": ["White", "Black", "Volt"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe12.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Running Power Shoes",
+            "brand": "Brooks",
+            "category": "Running",
+            "description": "Built for the long run. Superior shock absorption, breathable engineered mesh, and a segmented crash pad make every stride smooth and powerful.",
+            "price": 4500,
+            "colors": ["Orange", "Black", "Gray"],
+            "sizes": [7, 8, 9, 10, 11],
+            "image": "images/products/shoe13.jpg"
+        },
+        {
+            "id": 14,
+            "name": "All-Power Air Shoes",
+            "brand": "Nike",
+            "category": "Running",
+            "description": "Featuring visible Air cushioning and a full-length foam midsole, the All-Power Air delivers unmatched comfort for all-day wear and serious training.",
+            "price": 6300,
+            "colors": ["Black", "White", "Red"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe14.jpg"
+        },
+        {
+            "id": 15,
+            "name": "Lightweight Cut Shoes",
+            "brand": "Adidas",
+            "category": "Running",
+            "description": "Featherlight upper with a Boost midsole that returns energy with every step. Ideal for race day or a fast-paced training run.",
+            "price": 6500,
+            "colors": ["White", "Gray", "Blue"],
+            "sizes": [7, 8, 9, 10, 11],
+            "image": "images/products/shoe15.jpg"
+        },
+        {
+            "id": 16,
+            "name": "Gravity Shoes",
+            "brand": "Under Armour",
+            "category": "Running",
+            "description": "Defy gravity with UA HOVR cushioning that eliminates impact and returns energy. A smart shoe experience with built-in sensor tracks your every run.",
+            "price": 8100,
+            "colors": ["Black", "Neon Green"],
+            "sizes": [7, 8, 9, 10, 11, 12],
+            "image": "images/products/shoe16.jpg"
+        }
+    ]
+}
