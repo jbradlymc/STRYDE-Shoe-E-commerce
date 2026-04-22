@@ -104,6 +104,112 @@ main {
     padding-top: var(--nav-h);
 }
 
+.slideshow-section {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+}
+
+.slide-content {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    gap: 24px;
+}
+
+.slide-content.active {
+    display: flex;
+}
+
+.slide-content:nth-of-type(1) { background-color: var(--navy); }
+.slide-content:nth-of-type(2) { background-color: var(--royal); }
+.slide-content:nth-of-type(3) { background-color: var(--red); }
+
+.slide-text {
+    flex: 1;
+    z-index: 1;
+}
+
+.slide-text h1 {
+    font-family: Impact, 'Arial Narrow', Arial, sans-serif;
+    font-size: 3.8rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.05;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.slide-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.slideshow-section img {
+    width: 44%;
+    height: 100%;
+    object-fit: contain;
+    flex-shrink: 0;
+    filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.25));
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    font-size: 2.2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.slide-btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.slide-text .btn-order {
+    background: var(--white);
+    color: var(--navy);
+    font-family: Impact, 'Arial Narrow', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.slide-text .btn-order:hover {
+    background: var(--cyan);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
 .products-section {
     padding: 60px 5%;
     background: var(--ice);
@@ -135,6 +241,11 @@ main {
     display: flex;
     flex-direction: column;
     transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(26, 42, 108, 0.16);
 }
 
 .card-img-wrap {
@@ -228,6 +339,13 @@ footer p {
     font-weight: 400;
 }
 
+
+@media (max-width: 1024px) {
+    .card {
+        max-width: calc(33.33% - 14px);
+    }
+}
+
 @media (max-width: 768px) {
     .logo {
         font-size: 1.5rem;
@@ -242,6 +360,33 @@ footer p {
     .cart-btn {
         padding: 8px 14px;
         font-size: 0.78rem;
+    }
+
+    .slideshow-section {
+        height: auto;
+        min-height: 360px;
+    }
+
+    .slide-content.active {
+        flex-direction: column-reverse;
+        padding: 36px 6% 28px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .slideshow-section img {
+        width: 70%;
+        height: 200px;
+    }
+
+    .slide-text h1 {
+        font-size: 2.4rem;
+    }
+
+    .slide-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.6rem;
     }
 
     .card {
@@ -266,6 +411,26 @@ footer p {
     .cart-btn span:not(.cart-icon):not(.cart-count) {
         display: none; /* hide "Cart" text, keep icon + count */
     }
+
+    .slideshow-section {
+        min-height: 320px;
+    }
+
+    .slideshow-section img {
+        width: 88%;
+        height: 170px;
+    }
+
+    .slide-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .slide-text p {
+        font-size: 0.88rem;
+    }
+
+    .prev { left: 8px; }
+    .next { right: 8px; }
 
     .card {
         max-width: 100%;
