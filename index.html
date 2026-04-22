@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stryde - Built to Run. Made to Last.</title>
-    <link rel="icon" href="essentials/favicon.png">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scalgit ade=1.0">
+    <title>Stryde - Shoes • Sport • Style</title>
+    <link rel="icon" href="images/images//favicon.png">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+
     <header>
         <nav>
-            <div class="logo"> STRYDE 
-                <img src="essentials/icon_transparent.png" alt="Stryde Logo" class="logo-img">
+            <div class="logo">
+                STRYDE
+                <img src="images/essentials/icon_transparent.png" alt="Stryde Logo" class="logo-img">
             </div>
-            <button class="cart-btn">
+            <button class="cart-btn" id="cart-btn">
                 <span class="cart-icon">🛒</span>
                 Cart
                 <span class="cart-count" id="cart-count">0</span>
@@ -22,6 +24,8 @@
     </header>
 
     <main>
+
+        <!-- SLIDESHOW -->
         <section class="slideshow-section">
             <button class="slide-btn prev">&#8249;</button>
 
@@ -29,252 +33,55 @@
                 <div class="slide-text">
                     <h1>Built to Run.<br>Made to Last.</h1>
                     <p>Premium shoes for every stride.</p>
-                    <button class="btn-order">Buy Now</button>
+                    <button class="btn-buy">Buy Now</button>
                 </div>
-                <img src="featured/sneakers.png" alt="Maroon Sneakers">
+                <img src="images/featured/sneakers.png" alt="Maroon Sneakers">
             </div>
 
             <div class="slide-content">
                 <div class="slide-text">
-                    <h1>Built to Run.<br>Made to Last.</h1>
-                    <p>Premium shoes for every stride.</p>
-                    <button class="btn-order">Buy Now</button>
+                    <h1>Street Ready.<br>Always.</h1>
+                    <p>Performance meets everyday style.</p>
+                    <button class="btn-buy">Buy Now</button>
                 </div>
-                <img src="featured/running.png" alt="Blue Running Shoes">
+                <img src="images/featured/running.png" alt="Blue Running Shoes">
             </div>
 
             <div class="slide-content">
                 <div class="slide-text">
-                    <h1>Built to Run.<br>Made to Last.</h1>
-                    <p>Premium shoes for every stride.</p>
-                    <button class="btn-order">Buy Now</button>
+                    <h1>Bold Colors.<br>Bold Moves.</h1>
+                    <p>Express yourself with every step.</p>
+                    <button class="btn-buy">Buy Now</button>
                 </div>
-                <img src="featured/casual.png" alt="Colorful Design Shoes">
+                <img src="images/featured/casual.png" alt="Colorful Design Shoes">
             </div>
 
             <button class="slide-btn next">&#8250;</button>
         </section>
 
+        <!-- PRODUCTS — rendered by home.js from products.json -->
         <section class="products-section">
             <h2>OUR PRODUCTS</h2>
-            <div class="products-grid" id="products.grid">
-
-            <!--product1-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/casual.png" alt="Colorful Design Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Colorful Design Shoes</span>
-                        <span class="card-price">₱1,850</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product2-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/sneakers.png" alt="Maroon Sneakers" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Maroon Sneakers</span>
-                        <span class="card-price">₱2,550</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product3-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/running.png" alt="Blue Running Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Blue Running Shoes</span>
-                        <span class="card-price">₱5,350</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product4-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe01.jpg" alt="Leather Boots" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Leather Boots</span>
-                        <span class="card-price">₱1,550</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product5-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe02.jpg" alt="Basketball Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Basketball Shoes</span>
-                        <span class="card-price">₱2,760</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product6-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe03.jpg" alt="Nice Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Nice Shoes</span>
-                        <span class="card-price">₱3,000</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product7-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe04.jpg" alt="Grayish Fast Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Grayish Fast Shoes</span>
-                        <span class="card-price">₱3,400</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product8-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe05.jpg" alt="Very Neat Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Very Neat Shoes</span>
-                        <span class="card-price">₱2,800</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product9-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe06.jpg" alt="Powerful Blue Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Powerful Blue Shoes</span>
-                        <span class="card-price">₱3,550</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product10-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe07.jpg" alt="Casual White Sneakers" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Casual White Sneakers</span>
-                        <span class="card-price">₱1,650</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product11-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe11.jpg" alt="Old School Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Old School Shoes</span>
-                        <span class="card-price">₱2,400</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product12-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe12.jpg" alt="High Cut Casual Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">High Cut Casual Shoes</span>
-                        <span class="card-price">₱3,700</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-                
-                <!--product13-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe13.jpg" alt="Running Power Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Running Power Shoes</span>
-                        <span class="card-price">₱4,500</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product14-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe14.jpg" alt="All-Power Air Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">All-Power Air Shoes</span>
-                        <span class="card-price">₱6,300</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product15-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe15.jpg" alt="Lightweight Cut Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Lightweight Cut Shoes</span>
-                        <span class="card-price">₱6,500</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
-                <!--product16-->
-                <div class="card">
-                    <div class="card-img-wrap">
-                        <img src="products/shoe16.jpg" alt="Gravity Shoes" class="shoe-img">
-                    </div>
-                    <div class="card-body">
-                        <span class="card-name">Gravity Shoes</span>
-                        <span class="card-price">₱8,100</span>
-                        <button class="btn-order">View Product</button>
-                        <button class="btn-order">Add to Cart</button>
-                    </div>
-                </div>
-
+            <div class="products-grid" id="products-grid">
+                <!-- Cards injected here by home.js -->
             </div>
         </section>
+
     </main>
 
     <footer>
         <p>&copy; 2026 STRYDE. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Product Detail Overlay (US-view) -->
+    <div id="product-overlay" class="product-overlay hidden">
+        <div class="product-overlay-box" id="product-overlay-box">
+            <!-- Filled by product.js -->
+        </div>
+    </div>
+
+    <script src="js/cart.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
