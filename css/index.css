@@ -43,6 +43,29 @@ nav {
     padding: 0 5%;
 }
 
+/* ── NAV LINKS ── */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -244,6 +267,47 @@ main { padding-top: var(--nav-h); }
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.badge-featured {
+    background: var(--royal);
+    color: var(--white);
+}
+
+.badge-sale {
+    background: var(--red);
+    color: var(--white);
+}
+
+.price-original {
+    text-decoration: line-through;
+    color: #aaa;
+    font-weight: 500;
+    font-size: 0.88rem;
+    margin-right: 6px;
+}
+
+.price-sale {
+    color: #e63030;
+    font-weight: 800;
+    font-size: 1rem;
 }
 
 .shoe-img {
@@ -296,7 +360,7 @@ main { padding-top: var(--nav-h); }
 }
 
 .btn-view:hover {
-    background: var(--royal);
+    background: var(--navy);
     color: var(--white);
 }
 
@@ -356,6 +420,67 @@ footer p {
 
     .card { max-width: calc(50% - 10px); }
     .products-section { padding: 40px 4%; }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-h);
+        left: 0; right: 0;
+        background: var(--navy);
+        padding: 16px 0;
+        gap: 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        z-index: 99;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 5%;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        font-size: 0.9rem;
+    }
+
+    /* Hamburger button */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--white);
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    /* Animate hamburger to X when open */
+    .hamburger.open span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.open span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -374,4 +499,10 @@ footer p {
 
     .card { max-width: 100%; flex: 1 1 100%; }
     .card-img-wrap { height: 220px; }
+}
+
+/* Desktop — hide hamburger */
+@media (min-width: 769px) {
+    .hamburger { display: none; }
+    .nav-links { display: flex; }
 }
