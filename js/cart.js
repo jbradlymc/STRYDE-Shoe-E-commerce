@@ -1,6 +1,3 @@
-/* Cart Modal */
-
-// ── STATE ──────────────────────────────────
 let cart = [];
 
 // ── INJECT CART MODAL HTML INTO PAGE ───────
@@ -24,19 +21,16 @@ function initCartModal() {
     `;
     document.body.appendChild(backdrop);
 
-    // Load cart.css dynamically
     const link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = 'css/cart.css';
     document.head.appendChild(link);
 
-    // Events
     document.getElementById('cart-close-btn').addEventListener('click', closeCart);
     document.getElementById('cart-checkout-btn').addEventListener('click', () => {
         alert('Checkout coming soon!');
     });
 
-    // Close on backdrop click
     backdrop.addEventListener('click', function (e) {
         if (e.target === backdrop) closeCart();
     });
@@ -61,7 +55,8 @@ function renderCartItems() {
     const totalRow  = document.getElementById('cart-total-row');
     const divider   = document.getElementById('cart-divider');
 
-    countEl.textContent = `Number of items in the cart: ${cart.length}`;
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    countEl.textContent = `Number of items in the cart: ${totalItems}`;
 
     if (cart.length === 0) {
         container.innerHTML = `
@@ -73,19 +68,18 @@ function renderCartItems() {
         totalRow.style.display = 'none';
         divider.style.display  = 'none';
     } else {
-        // Build items HTML
         container.innerHTML = cart.map(item => `
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}">
                 <div class="cart-item-info">
                     <span class="cart-item-name">Item: ${item.name}</span>
                     <span class="cart-item-price">Price: ₱${item.price.toLocaleString()}</span>
+                    <span class="cart-item-qty">Qty: ${item.quantity}</span>
                 </div>
             </div>
         `).join('');
 
-        // Calculate and show total
-        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         totalEl.textContent    = '₱' + total.toLocaleString();
         totalRow.style.display = 'flex';
         divider.style.display  = 'block';
@@ -94,21 +88,28 @@ function renderCartItems() {
 
 // ── ADD TO CART ────────────────────────────
 function addToCart(name, price, image) {
-    cart.push({ name, price: Number(price), image });
+    const existing = cart.find(item => item.name === name);
+
+    if (existing) {
+        existing.quantity++;
+    } else {
+        cart.push({ name, price: Number(price), image, quantity: 1 });
+    }
+
     updateCartCount();
     alert(name + ' added to cart');
 }
 
-// ── UPDATE CART COUNT ───────────────────────────
+// ── UPDATE BADGE ───────────────────────────
 function updateCartCount() {
-    const cartCount = document.getElementById('cart-count');
-    if (cartCount) cartCount.textContent = cart.length;
+    const badge = document.getElementById('cart-count');
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    if (badge) badge.textContent = totalItems;
 }
 
+// ── INIT ON LOAD ───────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
     initCartModal();
-
-    // Hook cart button in nav
     const cartBtn = document.getElementById('cart-btn');
     if (cartBtn) cartBtn.addEventListener('click', openCart);
 });
