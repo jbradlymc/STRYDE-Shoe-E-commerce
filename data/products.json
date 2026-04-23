@@ -36,7 +36,7 @@
         {
             "id": 4,
             "name": "Leather Boots",
-            "brand": "Timberland",
+            "brand": "Puma",
             "category": "Casual",
             "description": "Premium full-grain leather boots built to last. Water-resistant construction with a rugged outsole — perfect for the outdoors or the city streets.",
             "price": 1550,
@@ -80,7 +80,7 @@
         {
             "id": 8,
             "name": "Very Neat Shoes",
-            "brand": "Reebok",
+            "brand": "New Balance",
             "category": "Casual",
             "description": "Effortlessly neat and put-together. A refined casual shoe that transitions smoothly from daytime errands to weekend hangouts.",
             "price": 2800,
@@ -91,7 +91,7 @@
         {
             "id": 9,
             "name": "Powerful Blue Shoes",
-            "brand": "Asics",
+            "brand": "Jordan",
             "category": "Running",
             "description": "Maximum support meets bold style. The Powerful Blue features a dual-density midsole and reinforced heel counter for serious runners.",
             "price": 3550,
@@ -135,7 +135,7 @@
         {
             "id": 13,
             "name": "Running Power Shoes",
-            "brand": "Brooks",
+            "brand": "Nike",
             "category": "Running",
             "description": "Built for the long run. Superior shock absorption, breathable engineered mesh, and a segmented crash pad make every stride smooth and powerful.",
             "price": 4500,

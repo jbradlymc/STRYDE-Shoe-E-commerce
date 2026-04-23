@@ -15,6 +15,23 @@
                 STRYDE
                 <img src="images/essentials/icon_transparent.png" alt="Stryde Logo" class="logo-img">
             </div>
+
+            <!-- Hamburger — visible on mobile only -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Categories ▾</a>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+
             <button class="cart-btn" id="cart-btn">
                 <span class="cart-icon">🛒</span>
                 Cart
@@ -29,41 +46,41 @@
         <section class="slideshow-section">
             <button class="slide-btn prev">&#8249;</button>
 
-            <div class="slide-content">
-                <div class="slide-text">
-                    <h1>Built to Run.<br>Made to Last.</h1>
-                    <p>Premium shoes for every stride.</p>
-                    <button class="btn-buy">Buy Now</button>
-                </div>
-                <img src="images/featured/sneakers.png" alt="Maroon Sneakers">
-            </div>
-
-            <div class="slide-content">
-                <div class="slide-text">
-                    <h1>Street Ready.<br>Always.</h1>
-                    <p>Performance meets everyday style.</p>
-                    <button class="btn-buy">Buy Now</button>
-                </div>
-                <img src="images/featured/running.png" alt="Blue Running Shoes">
-            </div>
-
-            <div class="slide-content">
+            <!-- Slide 1 -->
+            <div class="slide-content" style="background-image: url('images/featured/casual.png');">
                 <div class="slide-text">
                     <h1>Bold Colors.<br>Bold Moves.</h1>
                     <p>Express yourself with every step.</p>
-                    <button class="btn-buy">Buy Now</button>
+                    <button class="btn-buy" onclick="openProduct(1, productsData)">Buy Now</button>
                 </div>
-                <img src="images/featured/casual.png" alt="Colorful Design Shoes">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide-content" style="background-image: url('images/featured/sneakers.png');">
+                <div class="slide-text">
+                    <h1>Built to Run.<br>Made to Last.</h1>
+                    <p>Premium shoes for every stride.</p>
+                    <button class="btn-buy" onclick="openProduct(2, productsData)">Buy Now</button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide-content" style="background-image: url('images/featured/running.png');">
+                <div class="slide-text">
+                    <h1>Street Ready.<br>Always.</h1>
+                    <p>Performance meets everyday style.</p>
+                    <button class="btn-buy" onclick="openProduct(3, productsData)">Buy Now</button>
+                </div>
             </div>
 
             <button class="slide-btn next">&#8250;</button>
         </section>
 
-        <!-- PRODUCTS — rendered by home.js from products.json -->
+        <!-- PRODUCTS — rendered by index.js from products.json -->
         <section class="products-section">
             <h2>OUR PRODUCTS</h2>
             <div class="products-grid" id="products-grid">
-                <!-- Cards injected here by home.js -->
+                <!-- Cards injected here by index.js -->
             </div>
         </section>
 
