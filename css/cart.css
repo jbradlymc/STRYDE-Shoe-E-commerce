@@ -114,6 +114,12 @@
     font-weight: 600;
 }
 
+.cart-item-qty {
+    font-size: 0.78rem;
+    color: #999;
+    font-weight: 500;
+}
+
 /* Divider before total */
 .cart-divider {
     border: none;
