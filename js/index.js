@@ -113,3 +113,29 @@ navLinks.querySelectorAll('a').forEach(link => {
         navLinks.classList.remove('open');
     });
 });
+
+// ── SLIDE BACKGROUNDS (desktop vs mobile) ──
+const slideImages = {
+    desktop: [
+        'images/featured/sneakers.png',
+        'images/featured/running.png',
+        'images/featured/casual.png'
+    ],
+    mobile: [
+        'images/featured/casual-mobile.png',
+        'images/featured/sneakers-mobile.png',
+        'images/featured/running-mobile.png'
+    ]
+};
+
+function setSlideBackgrounds() {
+    const isMobile = window.innerWidth <= 480;
+    const images = isMobile ? slideImages.mobile : slideImages.desktop;
+
+    slides.forEach((slide, i) => {
+        slide.style.backgroundImage = `url('${images[i]}')`;
+    });
+}
+
+setSlideBackgrounds();
+window.addEventListener('resize', setSlideBackgrounds);
