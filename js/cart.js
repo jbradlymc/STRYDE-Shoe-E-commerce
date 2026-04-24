@@ -16,7 +16,7 @@ function initCartModal() {
                 <span class="cart-total-label">Total</span>
                 <span class="cart-total-amount" id="cart-total-amount">₱0</span>
             </div>
-            <button class="cart-modal-checkout" id="cart-checkout-btn">Checkout</button>
+            <button class="cart-modal-checkout" id="cart-checkout-btn")>Checkout</button>
         </div>
     `;
     document.body.appendChild(backdrop);
@@ -27,8 +27,32 @@ function initCartModal() {
     document.head.appendChild(link);
 
     document.getElementById('cart-close-btn').addEventListener('click', closeCart);
+    
     document.getElementById('cart-checkout-btn').addEventListener('click', () => {
-        alert('Checkout coming soon!');
+        if (cart.length === 0) {
+            alert('Your cart is empty!');
+            return;
+        }
+
+        const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        const confirmed = confirm(
+            `Order Summary\n` +
+            `─────────────────────\n` +
+            cart.map(item => `${item.name} x${item.quantity} — ₱${(item.price * item.quantity).toLocaleString()}`).join('\n') +
+            `\n─────────────────────\n` +
+            `Total: ₱${total.toLocaleString()}\n` +
+            `\nConfirm your order?`
+        );
+
+        if (confirmed) {
+            alert(`✅ Order placed! Thank you for shopping at STRYDE.\nTotal paid: ₱${total.toLocaleString()}`);
+            cart = [];
+            updateCartCount();
+            closeCart();
+            location.reload();
+        }
     });
 
     backdrop.addEventListener('click', function (e) {
