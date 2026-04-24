@@ -16,7 +16,7 @@ function initCartModal() {
                 <span class="cart-total-label">Total</span>
                 <span class="cart-total-amount" id="cart-total-amount">₱0</span>
             </div>
-            <button class="cart-modal-checkout" id="cart-checkout-btn")>Checkout</button>
+            <button class="cart-modal-checkout" id="cart-checkout-btn">Checkout</button>
         </div>
     `;
     document.body.appendChild(backdrop);
