@@ -114,6 +114,20 @@
     font-weight: 600;
 }
 
+.cart-price-original {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 0.78rem;
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+.cart-price-sale {
+    color: #e63030;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
 .cart-item-qty {
     font-size: 0.78rem;
     color: #999;

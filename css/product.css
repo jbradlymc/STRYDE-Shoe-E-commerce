@@ -127,6 +127,20 @@
     color: #0d1b3e;
 }
 
+.overlay-price-original {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.overlay-price-sale {
+    color: #e63030;
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
 .overlay-divider {
     border: none;
     border-top: 1px solid #e0e4f0;
