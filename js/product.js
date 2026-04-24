@@ -36,7 +36,16 @@ function openProduct(productId, productsData) {
                 <span class="overlay-category">${product.category}</span>
                 <h2 class="overlay-name">${product.name}</h2>
                 <p class="overlay-brand">Brand: <span>${product.brand}</span></p>
-                <p class="overlay-price">₱${Number(product.price).toLocaleString()}</p>
+
+                ${saleItems[product.id] !== undefined ? `
+                    <p class="overlay-price">
+                        <span class="overlay-price-original">₱${Number(product.price).toLocaleString()}</span>
+                        <span class="overlay-price-sale">₱${Number(saleItems[product.id]).toLocaleString()}</span>
+                    </p>
+                ` : `
+                    <p class="overlay-price">₱${Number(product.price).toLocaleString()}</p>
+                `}
+
                 <hr class="overlay-divider">
                 <p class="overlay-description">${product.description}</p>
                 <div>
@@ -47,7 +56,9 @@ function openProduct(productId, productsData) {
                     <p class="overlay-label">Select Size</p>
                     <div class="overlay-sizes">${sizesHTML}</div>
                 </div>
-                <button class="overlay-add-btn" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">
+                <button class="overlay-add-btn" onclick="addToCart('${product.name}', ${saleItems[product.id] 
+                    ?? product.price}, '${product.image}', ${saleItems[product.id] 
+                    !== undefined ? product.price : null})">
                     Add to Cart
                 </button>
             </div>

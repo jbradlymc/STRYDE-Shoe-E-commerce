@@ -90,7 +90,11 @@ function renderProducts(products) {
                 ${priceHTML}
                 <span class="card-colors">Colors: ${product.colors.join(', ')}</span>
                 <button class="btn-view" onclick="openProduct(${product.id}, productsData)">View Product</button>
-                <button class="btn-cart" onclick="addToCart('${product.name}', ${product.price}, '${product.image}')">Add to Cart</button>
+                <button class="btn-cart" onclick="addToCart('${product.name}', ${saleItems[product.id] 
+                    ?? product.price}, '${product.image}', ${saleItems[product.id] 
+                    !== undefined ? product.price : null})">
+                    Add to Cart
+                </button>
             </div>
         `;
         grid.appendChild(card);
@@ -117,9 +121,9 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ── SLIDE BACKGROUNDS (desktop vs mobile) ──
 const slideImages = {
     desktop: [
+        'images/featured/casual.png',
         'images/featured/sneakers.png',
-        'images/featured/running.png',
-        'images/featured/casual.png'
+        'images/featured/running.png'
     ],
     mobile: [
         'images/featured/casual-mobile.png',

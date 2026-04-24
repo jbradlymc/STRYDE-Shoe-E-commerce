@@ -68,16 +68,25 @@ function renderCartItems() {
         totalRow.style.display = 'none';
         divider.style.display  = 'none';
     } else {
-        container.innerHTML = cart.map(item => `
-            <div class="cart-item">
-                <img src="${item.image}" alt="${item.name}">
-                <div class="cart-item-info">
-                    <span class="cart-item-name">Item: ${item.name}</span>
-                    <span class="cart-item-price">Price: ₱${item.price.toLocaleString()}</span>
-                    <span class="cart-item-qty">Qty: ${item.quantity}</span>
+        container.innerHTML = cart.map(item => {
+            const priceHTML = item.originalPrice
+                ? `<span class="cart-item-price">
+                    <span class="cart-price-original">₱${item.originalPrice.toLocaleString()}</span>
+                    <span class="cart-price-sale">₱${item.price.toLocaleString()}</span>
+                </span>`
+                : `<span class="cart-item-price">₱${item.price.toLocaleString()}</span>`;
+
+            return `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <span class="cart-item-name">Item: ${item.name}</span>
+                        ${priceHTML}
+                        <span class="cart-item-qty">Qty: ${item.quantity}</span>
+                    </div>
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
 
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         totalEl.textContent    = '₱' + total.toLocaleString();
@@ -87,13 +96,13 @@ function renderCartItems() {
 }
 
 // ── ADD TO CART ────────────────────────────
-function addToCart(name, price, image) {
+function addToCart(name, price, image, originalPrice = null) {
     const existing = cart.find(item => item.name === name);
 
     if (existing) {
         existing.quantity++;
     } else {
-        cart.push({ name, price: Number(price), image, quantity: 1 });
+        cart.push({ name, price: Number(price), image, quantity: 1, originalPrice: originalPrice ? Number(originalPrice) : null });
     }
 
     updateCartCount();
