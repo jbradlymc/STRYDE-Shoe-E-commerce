@@ -186,7 +186,8 @@
     transition: border-color 0.2s, background 0.2s, color 0.2s;
 }
 
-.size-tag:hover, .size-tag.selected {
+.size-tag:hover,
+.size-tag.selected {
     border-color: #005bea;
     background: #005bea;
     color: #ffffff;
@@ -215,8 +216,16 @@
     transform: translateY(-2px);
 }
 
-/* ── RESPONSIVE ── */
-@media (max-width: 680px) {
+/* RESPONSIVE — Tablet (max 820px) */
+@media (max-width: 820px) {
+    .product-overlay {
+        padding: 16px;
+    }
+
+    .product-overlay-box {
+        max-height: 92vh;
+    }
+
     .overlay-body {
         flex-direction: column;
     }
@@ -224,14 +233,73 @@
     .overlay-img-wrap {
         width: 100%;
         border-radius: 20px 20px 0 0;
-        min-height: 220px;
-        padding: 24px;
+        min-height: 260px;
+        padding: 28px;
+    }
+
+    .overlay-img-wrap img {
+        max-height: 220px;
     }
 
     .overlay-details {
-        padding: 24px 20px;
+        padding: 28px 24px;
+        gap: 12px;
     }
 
-    .overlay-name { font-size: 1.5rem; }
-    .overlay-price { font-size: 1.3rem; }
+    .overlay-name { font-size: 1.6rem; }
+    .overlay-price { font-size: 1.4rem; }
+    .overlay-description { font-size: 0.88rem; }
+}
+
+/* RESPONSIVE — Mobile (max 480px) */
+@media (max-width: 480px) {
+    .product-overlay {
+        padding: 10px;
+    }
+
+    .product-overlay-box {
+        border-radius: 16px;
+        max-height: 94vh;
+    }
+
+    .overlay-close {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+
+    .overlay-img-wrap {
+        min-height: 200px;
+        padding: 16px;
+    }
+
+    .overlay-img-wrap img {
+        max-height: 180px;
+    }
+
+    .overlay-details {
+        padding: 16px 14px;
+        gap: 10px;
+    }
+
+    .overlay-name {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+    }
+
+    .overlay-price { font-size: 1.2rem; }
+    .overlay-description { font-size: 0.82rem; line-height: 1.6; }
+
+    .size-tag {
+        width: 38px;
+        height: 38px;
+        font-size: 0.75rem;
+    }
+
+    .overlay-add-btn {
+        padding: 12px 0;
+        font-size: 0.9rem;
+    }
 }
